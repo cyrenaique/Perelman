@@ -66,8 +66,8 @@ export default function VideosPage() {
 
       {/* All Videos — sorted by year, newest first */}
       <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {allVideos.map((video) => (
               <div
                 key={`${video.title}-${video.year}`}
