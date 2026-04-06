@@ -1,4 +1,4 @@
-import { Mail, MapPin, Clock, Send } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -27,8 +27,7 @@ export default function ContactPage() {
       {/* Content */}
       <section className="py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Info */}
+          <div>
             <div>
               <h2 className="font-display text-2xl font-bold text-gray-900 mb-6">
                 Get in Touch
@@ -68,71 +67,6 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Contact Form (static / no backend) */}
-            <div className="bg-white rounded-2xl p-8 border border-primary-100 shadow-sm">
-              <h2 className="font-display text-2xl font-bold text-gray-900 mb-6">
-                Send a Message
-              </h2>
-              <form
-                action="https://formsubmit.co/your-email@example.com"
-                method="POST"
-                className="space-y-5"
-              >
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Your Name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    className="w-full border border-primary-100 rounded-lg px-4 py-3 text-gray-900 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition bg-chalk-50"
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Your Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    className="w-full border border-primary-100 rounded-lg px-4 py-3 text-gray-900 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition bg-chalk-50"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    className="w-full border border-primary-100 rounded-lg px-4 py-3 text-gray-900 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition resize-none bg-chalk-50"
-                    placeholder="Tell us what you're interested in..."
-                  />
-                </div>
-                <button type="submit" className="btn-primary w-full justify-center bg-primary-700 hover:bg-primary-600 text-white font-bold">
-                  <Send className="w-5 h-5" />
-                  Send Message
-                </button>
-              </form>
             </div>
           </div>
         </div>
