@@ -20,7 +20,7 @@ const featuredVideos: FeaturedVideo[] = [
     title: "The Sound of Music",
     description:
       "Our 2026 production of The Sound of Music — a beloved classic brought to life by the Perelman Theatre troupe.",
-    url: "https://mega.nz/file/Bok2HJTD#5BSYgLse1d_ktTKCkjTUgrdGpG3GNQBDJR12wUofPMY",
+    url: "https://mega.nz/file/Y012ULhC#zr8jM7l64D3UuecKhBPKBK9SM4eY2WhkoLt571SNjlE",
     year: "2026",
   },
 ];
