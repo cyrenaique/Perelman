@@ -40,7 +40,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900">Email</h3>
-                    <p className="text-gray-600">contact@perelman-theatre.org</p>
+                    <p className="text-gray-600">geniustwice@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

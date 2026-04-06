@@ -62,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4 text-primary-300" />
-                <span>contact@perelman-theatre.org</span>
+                <span>geniustwice@gmail.com</span>
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <MapPin className="w-4 h-4 text-primary-300" />
