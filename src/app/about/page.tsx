@@ -1,5 +1,3 @@
-import { Users } from "lucide-react";
-
 export default function AboutPage() {
   return (
     <>
@@ -10,10 +8,6 @@ export default function AboutPage() {
           <div className="absolute bottom-6 left-[15%] font-math text-6xl text-white/[0.04] rotate-12">&Sigma;</div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6 border border-white/10">
-            <Users className="w-4 h-4 text-white" />
-            <span className="text-sm font-medium text-primary-200">Our Story</span>
-          </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             About Us
           </h1>
