@@ -68,32 +68,33 @@ export default function VideosPage() {
             <h2 className="section-heading text-center mb-10">
               Featured Performances
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
               {featuredVideos.map((video) => (
                 <a
                   key={video.url}
                   href={video.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all"
+                  className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all flex flex-col md:flex-row"
                 >
-                  <div className="aspect-video bg-gradient-to-br from-primary-800 to-primary-950 flex items-center justify-center relative overflow-hidden">
+                  <div className="relative overflow-hidden md:w-1/2 flex-shrink-0 bg-gradient-to-br from-primary-800 to-primary-950">
                     {video.thumbnail ? (
                       <img
                         src={video.thumbnail}
                         alt={video.title}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     ) : null}
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors" />
-                    <div className="relative w-20 h-20 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                      <Play className="w-10 h-10 text-white ml-1" />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                      <div className="w-16 h-16 bg-white/25 rounded-full flex items-center justify-center group-hover:bg-white/35 transition-colors">
+                        <Play className="w-8 h-8 text-white ml-1" />
+                      </div>
                     </div>
                     <span className="absolute top-4 right-4 bg-gold-500 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">
                       {video.year}
                     </span>
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col justify-center">
                     <div className="flex items-start justify-between gap-3">
                       <div>
                         <h3 className="font-display text-xl font-bold text-gray-900 mb-2">
