@@ -13,6 +13,7 @@ interface FeaturedVideo {
   description: string;
   url: string;
   year: string;
+  thumbnail?: string;
 }
 
 const featuredVideos: FeaturedVideo[] = [
@@ -22,6 +23,7 @@ const featuredVideos: FeaturedVideo[] = [
       "Our 2026 production of The Sound of Music — a beloved classic brought to life by the Perelman Theatre troupe.",
     url: "https://mega.nz/file/Y012ULhC#zr8jM7l64D3UuecKhBPKBK9SM4eY2WhkoLt571SNjlE",
     year: "2026",
+    thumbnail: "/pictures/affiche.png",
   },
 ];
 
@@ -75,8 +77,16 @@ export default function VideosPage() {
                   rel="noopener noreferrer"
                   className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all"
                 >
-                  <div className="aspect-video bg-gradient-to-br from-primary-800 to-primary-950 flex items-center justify-center relative">
-                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                  <div className="aspect-video bg-gradient-to-br from-primary-800 to-primary-950 flex items-center justify-center relative overflow-hidden">
+                    {video.thumbnail ? (
+                      <img
+                        src={video.thumbnail}
+                        alt={video.title}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : null}
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors" />
+                    <div className="relative w-20 h-20 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
                       <Play className="w-10 h-10 text-white ml-1" />
                     </div>
                     <span className="absolute top-4 right-4 bg-gold-500 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">
