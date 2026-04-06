@@ -11,8 +11,8 @@ export default function ContactPage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6 border border-white/10">
-            <Mail className="w-4 h-4 text-gold-400" />
-            <span className="text-sm font-medium text-gold-200">Reach Out</span>
+            <Mail className="w-4 h-4 text-white" />
+            <span className="text-sm font-medium text-primary-200">Reach Out</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Contact Us
@@ -128,7 +128,7 @@ export default function ContactPage() {
                     placeholder="Tell us what you're interested in..."
                   />
                 </div>
-                <button type="submit" className="btn-primary w-full justify-center bg-gold-500 hover:bg-gold-400 text-primary-950 font-bold">
+                <button type="submit" className="btn-primary w-full justify-center bg-primary-700 hover:bg-primary-600 text-white font-bold">
                   <Send className="w-5 h-5" />
                   Send Message
                 </button>
