@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Camera, Video, Users, Star, Heart, Sparkles } from "lucide-react";
+import { Camera, Users } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -63,92 +63,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-white/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="font-math text-3xl text-primary-400 block mb-2">{"{ π · θ · Σ }"}</span>
-            <h2 className="section-heading">What We Do</h2>
-            <p className="section-subheading">
-              Like the elegance of a mathematical proof, we craft performances
-              with precision, creativity, and heart.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                symbol: "&star;",
-                icon: <Star className="w-8 h-8" />,
-                title: "Performances",
-                desc: "We stage plays, musicals, and dramatic readings in English — from classics to contemporary works.",
-              },
-              {
-                symbol: "&hearts;",
-                icon: <Heart className="w-8 h-8" />,
-                title: "Community",
-                desc: "Open to all ages and levels. Whether you act, direct, or help backstage, there's a place for you.",
-              },
-              {
-                symbol: "&lowast;",
-                icon: <Sparkles className="w-8 h-8" />,
-                title: "Workshops",
-                desc: "Regular workshops to develop acting skills, voice technique, and stagecraft in a supportive environment.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all border border-primary-100 hover:border-primary-200 group"
-              >
-                <div className="w-14 h-14 bg-primary-50 text-primary-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
-                  {item.icon}
-                </div>
-                <h3 className="font-display text-xl font-bold text-gray-900 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-primary-900 via-primary-800 to-primary-900 rounded-3xl p-10 md:p-16 text-center text-white relative overflow-hidden">
-            <div className="absolute inset-0 select-none pointer-events-none opacity-[0.05]">
-              <div className="absolute top-4 left-8 font-math text-7xl text-white rotate-12">&pi;</div>
-              <div className="absolute bottom-4 right-12 font-math text-6xl text-white -rotate-6">&#x222B;</div>
-              <div className="absolute top-1/2 right-1/4 font-math text-5xl text-white rotate-3">&infin;</div>
-            </div>
-            <div className="relative">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                Explore Our Productions
-              </h2>
-              <p className="text-primary-200 max-w-xl mx-auto mb-8 text-lg">
-                From The Sound of Music to Mary Poppins — dive into our photo
-                gallery and video archive to relive our best moments on stage.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
-                  href="/gallery"
-                  className="btn-primary bg-white hover:bg-primary-100 text-primary-900 font-bold"
-                >
-                  <Camera className="w-5 h-5" />
-                  Photo Gallery
-                </Link>
-                <Link
-                  href="/videos"
-                  className="btn-outline border-white/40 text-white hover:bg-white/10 hover:border-white/60"
-                >
-                  <Video className="w-5 h-5" />
-                  Watch Videos
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
