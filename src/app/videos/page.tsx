@@ -21,8 +21,9 @@ const youtubeVideos: YouTubeVideo[] = [
     thumbnail: "/pictures/canter2019.png",
   },
   {
-    title: "Perelman Theatre Performance",
+    title: "Mary Poppins (2022)",
     embedId: "1oQnhDqd2ZU",
+    thumbnail: "/pictures/poppins_2022.jpeg",
   },
 ];
 
