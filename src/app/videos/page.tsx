@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Video, VideoOff, ExternalLink, Play } from "lucide-react";
 
 interface VideoFile {
@@ -11,12 +11,14 @@ interface VideoFile {
 interface YouTubeVideo {
   title: string;
   embedId: string;
+  thumbnail?: string;
 }
 
 const youtubeVideos: YouTubeVideo[] = [
   {
-    title: "The Sound of Music — Highlights",
+    title: "Canterville Ghost (2019)",
     embedId: "jxfXngq85Is",
+    thumbnail: "/pictures/canter2019.png",
   },
   {
     title: "Perelman Theatre Performance",
@@ -53,6 +55,7 @@ const featuredVideos: FeaturedVideo[] = [
 
 export default function VideosPage() {
   const [videos, setVideos] = useState<VideoFile[]>([]);
+  const [playingYT, setPlayingYT] = useState<string | null>(null);
 
   useEffect(() => {
     const loadVideos = async () => {
@@ -155,14 +158,40 @@ export default function VideosPage() {
                   key={video.embedId}
                   className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
                 >
-                  <div className="aspect-video">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${video.embedId}`}
-                      title={video.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    />
+                  <div className="aspect-video relative">
+                    {playingYT === video.embedId ? (
+                      <iframe
+                        src={`https://www.youtube.com/embed/${video.embedId}?autoplay=1`}
+                        title={video.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                    ) : video.thumbnail ? (
+                      <button
+                        onClick={() => setPlayingYT(video.embedId)}
+                        className="w-full h-full relative group cursor-pointer"
+                      >
+                        <img
+                          src={video.thumbnail}
+                          alt={video.title}
+                          className="w-full h-full object-contain bg-gradient-to-br from-primary-800 to-primary-950 group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors shadow-lg">
+                            <Play className="w-8 h-8 text-white ml-1" />
+                          </div>
+                        </div>
+                      </button>
+                    ) : (
+                      <iframe
+                        src={`https://www.youtube.com/embed/${video.embedId}`}
+                        title={video.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                    )}
                   </div>
                   <div className="p-4">
                     <h3 className="font-display font-bold text-gray-900">
