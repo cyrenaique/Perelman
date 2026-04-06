@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Camera, Users } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -52,11 +51,9 @@ export default function HomePage() {
               href="/gallery"
               className="btn-primary bg-white hover:bg-primary-100 text-primary-900 font-bold"
             >
-              <Camera className="w-5 h-5" />
               View Gallery
             </Link>
             <Link href="/about" className="btn-outline border-white/40 text-white hover:bg-white/10 hover:border-white/60">
-              <Users className="w-5 h-5" />
               About Us
             </Link>
           </div>
