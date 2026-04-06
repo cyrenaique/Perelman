@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-body text-gray-800 bg-white;
+    @apply font-body text-gray-800 bg-chalk-50;
   }
 
   h1, h2, h3, h4 {
@@ -31,5 +31,9 @@
 
   .section-subheading {
     @apply text-lg text-gray-600 max-w-2xl mx-auto;
+  }
+
+  .math-decoration {
+    @apply font-math text-primary-300/20 select-none pointer-events-none;
   }
 }

@@ -51,11 +51,15 @@ export default function GalleryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-800 to-primary-950 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6">
-            <Camera className="w-4 h-4" />
-            <span className="text-sm font-medium">Our Memories</span>
+      <section className="bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 select-none pointer-events-none">
+          <div className="absolute top-6 left-[12%] font-math text-7xl text-white/[0.04] rotate-6">&Delta;</div>
+          <div className="absolute bottom-4 right-[8%] font-math text-6xl text-white/[0.04] -rotate-12">&Omega;</div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6 border border-white/10">
+            <Camera className="w-4 h-4 text-gold-400" />
+            <span className="text-sm font-medium text-gold-200">Our Memories</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Photo Gallery
