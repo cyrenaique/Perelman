@@ -8,6 +8,22 @@ interface VideoFile {
   src: string;
 }
 
+interface YouTubeVideo {
+  title: string;
+  embedId: string;
+}
+
+const youtubeVideos: YouTubeVideo[] = [
+  {
+    title: "The Sound of Music — Highlights",
+    embedId: "jxfXngq85Is",
+  },
+  {
+    title: "Perelman Theatre Performance",
+    embedId: "1oQnhDqd2ZU",
+  },
+];
+
 interface FeaturedVideo {
   title: string;
   description: string;
@@ -112,6 +128,40 @@ export default function VideosPage() {
                     </div>
                   </div>
                 </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* YouTube Videos */}
+      {youtubeVideos.length > 0 && (
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="section-heading text-center mb-10">
+              On YouTube
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {youtubeVideos.map((video) => (
+                <div
+                  key={video.embedId}
+                  className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                >
+                  <div className="aspect-video">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.embedId}`}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-display font-bold text-gray-900">
+                      {video.title}
+                    </h3>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
