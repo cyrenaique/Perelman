@@ -24,19 +24,19 @@ export default function HomePage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/10">
-            <span className="font-math text-gold-300 text-lg">&pi;</span>
-            <span className="text-sm font-medium text-gold-200">
+            <span className="font-math text-white text-lg">&pi;</span>
+            <span className="text-sm font-medium text-primary-200">
               Where Mathematics Meets Theatre
             </span>
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
             Amateur Theatre
             <br />
-            <span className="text-gold-400">in English</span>
+            <span className="text-white">in English</span>
             <br />
             <span className="relative">
               Perelman
-              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
+              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white to-transparent"></span>
             </span>
           </h1>
           <p className="text-lg md:text-xl text-primary-200 max-w-2xl mx-auto mb-4 leading-relaxed">
@@ -50,12 +50,12 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/gallery"
-              className="btn-primary bg-gold-500 hover:bg-gold-400 text-primary-950 font-bold"
+              className="btn-primary bg-white hover:bg-primary-100 text-primary-900 font-bold"
             >
               <Camera className="w-5 h-5" />
               View Gallery
             </Link>
-            <Link href="/about" className="btn-outline border-primary-300 text-primary-200 hover:bg-primary-800 hover:text-white hover:border-primary-600">
+            <Link href="/about" className="btn-outline border-white/40 text-white hover:bg-white/10 hover:border-white/60">
               <Users className="w-5 h-5" />
               About Us
             </Link>
@@ -67,7 +67,7 @@ export default function HomePage() {
       <section className="py-20 bg-white/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="font-math text-3xl text-primary-300 block mb-2">&lbrace; &pi; &middot; &theta; &middot; &Sigma; &rbrace;</span>
+            <span className="font-math text-3xl text-primary-400 block mb-2">&lbrace; &pi; &middot; &theta; &middot; &Sigma; &rbrace;</span>
             <h2 className="section-heading">What We Do</h2>
             <p className="section-subheading">
               Like the elegance of a mathematical proof, we craft performances
@@ -132,14 +132,14 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   href="/gallery"
-                  className="btn-primary bg-gold-500 text-primary-950 hover:bg-gold-400 font-bold"
+                  className="btn-primary bg-white hover:bg-primary-100 text-primary-900 font-bold"
                 >
                   <Camera className="w-5 h-5" />
                   Photo Gallery
                 </Link>
                 <Link
                   href="/videos"
-                  className="btn-outline border-primary-300 text-primary-200 hover:bg-primary-700 hover:text-white hover:border-primary-600"
+                  className="btn-outline border-white/40 text-white hover:bg-white/10 hover:border-white/60"
                 >
                   <Video className="w-5 h-5" />
                   Watch Videos

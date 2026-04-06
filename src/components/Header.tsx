@@ -21,14 +21,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 bg-gold-500 rounded-xl flex items-center justify-center group-hover:bg-gold-400 transition-colors shadow-md">
-              <span className="font-math text-2xl font-bold text-primary-950">&pi;</span>
+            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center group-hover:bg-primary-100 transition-colors shadow-md">
+              <span className="font-math text-2xl font-bold text-primary-800">&pi;</span>
             </div>
             <div>
               <span className="font-display text-xl font-bold text-white block leading-tight">
                 Perelman Theatre
               </span>
-              <span className="text-xs text-gold-400 font-medium tracking-wide uppercase">
+              <span className="text-xs text-primary-300 font-medium tracking-wide uppercase">
                 Amateur Theatre in English
               </span>
             </div>
@@ -40,7 +40,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 rounded-lg text-primary-200 hover:text-gold-300 hover:bg-primary-800/50 font-medium transition-colors"
+                className="px-4 py-2 rounded-lg text-primary-200 hover:text-white hover:bg-primary-800/50 font-medium transition-colors"
               >
                 {link.label}
               </Link>
@@ -65,7 +65,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="block py-3 px-4 text-primary-200 hover:text-gold-300 hover:bg-primary-800/50 rounded-lg font-medium transition-colors"
+              className="block py-3 px-4 text-primary-200 hover:text-white hover:bg-primary-800/50 rounded-lg font-medium transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}

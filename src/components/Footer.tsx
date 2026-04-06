@@ -15,8 +15,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center">
-                <span className="font-math text-xl font-bold text-primary-950">&pi;</span>
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                <span className="font-math text-xl font-bold text-primary-800">&pi;</span>
               </div>
               <span className="font-display text-lg font-bold text-white">
                 Perelman Theatre
@@ -31,7 +31,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-display font-bold text-gold-400 mb-4">
+            <h3 className="font-display font-bold text-white mb-4">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -45,7 +45,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-gold-300 transition-colors"
+                    className="text-sm hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -56,16 +56,16 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-display font-bold text-gold-400 mb-4">
+            <h3 className="font-display font-bold text-white mb-4">
               Get in Touch
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm">
-                <Mail className="w-4 h-4 text-gold-500" />
+                <Mail className="w-4 h-4 text-primary-300" />
                 <span>contact@perelman-theatre.org</span>
               </li>
               <li className="flex items-center gap-2 text-sm">
-                <MapPin className="w-4 h-4 text-gold-500" />
+                <MapPin className="w-4 h-4 text-primary-300" />
                 <span>Strasbourg, France</span>
               </li>
             </ul>
