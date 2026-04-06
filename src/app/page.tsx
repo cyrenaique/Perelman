@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function HomePage() {
   return (
     <>
@@ -46,17 +44,6 @@ export default function HomePage() {
           <p className="font-math text-sm text-primary-400 mb-10 italic">
             &quot;The proof of great theatre is in the performance&quot;
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/gallery"
-              className="btn-primary bg-white hover:bg-primary-100 text-primary-900 font-bold"
-            >
-              View Gallery
-            </Link>
-            <Link href="/about" className="btn-outline border-white/40 text-white hover:bg-white/10 hover:border-white/60">
-              About Us
-            </Link>
-          </div>
         </div>
       </section>
 
