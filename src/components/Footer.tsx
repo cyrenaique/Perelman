@@ -1,5 +1,4 @@
 import { Mail, MapPin } from "lucide-react";
-import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -11,7 +10,7 @@ export default function Footer() {
         <div className="absolute bottom-4 right-8 font-math text-5xl text-white rotate-12">&Sigma;</div>
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -27,31 +26,6 @@ export default function Footer() {
               mathematics meets the art of performance. Like a beautiful proof,
               every show tells a story.
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-display font-bold text-white mb-4">
-              Quick Links
-            </h3>
-            <ul className="space-y-2">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/gallery", label: "Gallery" },
-                { href: "/videos", label: "Videos" },
-                { href: "/about", label: "About Us" },
-                { href: "/contact", label: "Contact" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Contact */}
