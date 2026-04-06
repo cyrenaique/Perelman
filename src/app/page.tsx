@@ -67,7 +67,7 @@ export default function HomePage() {
       <section className="py-20 bg-white/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="font-math text-3xl text-primary-400 block mb-2">&lbrace; &pi; &middot; &theta; &middot; &Sigma; &rbrace;</span>
+            <span className="font-math text-3xl text-primary-400 block mb-2">{"{ π · θ · Σ }"}</span>
             <h2 className="section-heading">What We Do</h2>
             <p className="section-subheading">
               Like the elegance of a mathematical proof, we craft performances
