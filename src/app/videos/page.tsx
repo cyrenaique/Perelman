@@ -41,6 +41,13 @@ const featuredVideos: FeaturedVideo[] = [
     year: "2026",
     thumbnail: "/pictures/affiche.png",
   },
+  {
+    title: "Perelman Theatre — Full Performance",
+    description:
+      "Another memorable performance by the Amateur Theatre in English Perelman troupe.",
+    url: "https://mega.nz/file/Fwlj2Joa#7wla3akaxZEC0fzyY3FwPJdwr_pXhnz8aG-Y358KtKs",
+    year: "2026",
+  },
 ];
 
 export default function VideosPage() {
