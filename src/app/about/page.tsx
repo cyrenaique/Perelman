@@ -17,9 +17,6 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             About Us
           </h1>
-          <p className="text-primary-200 max-w-xl mx-auto text-lg">
-            Learn about our mission, values, and the people behind Perelman Theatre.
-          </p>
         </div>
       </section>
 
