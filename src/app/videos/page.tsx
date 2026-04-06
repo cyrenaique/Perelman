@@ -1,75 +1,50 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { Video, VideoOff, ExternalLink, Play } from "lucide-react";
+import { useState } from "react";
+import { ExternalLink, Play } from "lucide-react";
 
-interface VideoFile {
-  name: string;
-  src: string;
-}
-
-interface YouTubeVideo {
+interface PerformanceVideo {
   title: string;
-  embedId: string;
+  year: number;
   thumbnail?: string;
+  type: "mega" | "youtube";
+  url?: string;
+  embedId?: string;
 }
 
-const youtubeVideos: YouTubeVideo[] = [
-  {
-    title: "Canterville Ghost (2019)",
-    embedId: "jxfXngq85Is",
-    thumbnail: "/pictures/canter2019.png",
-  },
-  {
-    title: "Mary Poppins (2022)",
-    embedId: "1oQnhDqd2ZU",
-    thumbnail: "/pictures/poppins_2022.jpeg",
-  },
-];
-
-interface FeaturedVideo {
-  title: string;
-  description: string;
-  url: string;
-  year: string;
-  thumbnail?: string;
-}
-
-const featuredVideos: FeaturedVideo[] = [
+const allVideos: PerformanceVideo[] = ([
   {
     title: "The Sound of Music",
-    description:
-      "Our 2026 production of The Sound of Music — a beloved classic brought to life by the Perelman Theatre troupe.",
-    url: "https://mega.nz/file/Y012ULhC#zr8jM7l64D3UuecKhBPKBK9SM4eY2WhkoLt571SNjlE",
-    year: "2026",
+    year: 2026,
     thumbnail: "/pictures/affiche.png",
+    type: "mega" as const,
+    url: "https://mega.nz/file/Y012ULhC#zr8jM7l64D3UuecKhBPKBK9SM4eY2WhkoLt571SNjlE",
   },
   {
-    title: "The Sound of Music (2024)",
-    description:
-      "Our 2024 production of The Sound of Music — a cherished performance by the Perelman Theatre troupe.",
-    url: "https://mega.nz/file/Fwlj2Joa#7wla3akaxZEC0fzyY3FwPJdwr_pXhnz8aG-Y358KtKs",
-    year: "2024",
+    title: "The Sound of Music",
+    year: 2024,
     thumbnail: "/pictures/SofM2bt_2024.png",
+    type: "mega" as const,
+    url: "https://mega.nz/file/Fwlj2Joa#7wla3akaxZEC0fzyY3FwPJdwr_pXhnz8aG-Y358KtKs",
   },
-];
+  {
+    title: "Mary Poppins",
+    year: 2022,
+    thumbnail: "/pictures/poppins_2022.jpeg",
+    type: "youtube" as const,
+    embedId: "1oQnhDqd2ZU",
+  },
+  {
+    title: "The Canterville Ghost",
+    year: 2019,
+    thumbnail: "/pictures/canter2019.png",
+    type: "youtube" as const,
+    embedId: "jxfXngq85Is",
+  },
+] as PerformanceVideo[]).sort((a, b) => b.year - a.year);
 
 export default function VideosPage() {
-  const [videos, setVideos] = useState<VideoFile[]>([]);
   const [playingYT, setPlayingYT] = useState<string | null>(null);
-
-  useEffect(() => {
-    const loadVideos = async () => {
-      try {
-        const res = await fetch("/api/media?folder=videos");
-        if (res.ok) {
-          const data = await res.json();
-          setVideos(data.files);
-        }
-      } catch {}
-    };
-    loadVideos();
-  }, []);
 
   return (
     <>
@@ -80,182 +55,87 @@ export default function VideosPage() {
           <div className="absolute bottom-6 left-[12%] font-math text-6xl text-white/[0.04] -rotate-6">&infin;</div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6 border border-white/10">
-            <Video className="w-4 h-4 text-white" />
-            <span className="text-sm font-medium text-primary-200">On Stage</span>
-          </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Videos
           </h1>
           <p className="text-primary-200 max-w-xl mx-auto text-lg">
-            Watch recordings of our performances, rehearsals, and behind-the-scenes moments.
+            Watch recordings of our performances.
           </p>
         </div>
       </section>
 
-      {/* Featured Performances */}
-      {featuredVideos.length > 0 && (
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="section-heading text-center mb-10">
-              Featured Performances
-            </h2>
-            <div className="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
-              {featuredVideos.map((video) => (
-                <a
-                  key={video.url}
-                  href={video.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all flex flex-col md:flex-row"
-                >
-                  <div className="relative overflow-hidden md:w-1/2 flex-shrink-0 bg-gradient-to-br from-primary-800 to-primary-950">
-                    {video.thumbnail ? (
-                      <img
-                        src={video.thumbnail}
-                        alt={video.title}
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                      />
-                    ) : null}
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                      <div className="w-16 h-16 bg-white/25 rounded-full flex items-center justify-center group-hover:bg-white/35 transition-colors">
-                        <Play className="w-8 h-8 text-white ml-1" />
-                      </div>
-                    </div>
-                    <span className="absolute top-4 right-4 bg-gold-500 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">
-                      {video.year}
-                    </span>
-                  </div>
-                  <div className="p-6 flex flex-col justify-center">
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <h3 className="font-display text-xl font-bold text-gray-900 mb-2">
-                          {video.title}
-                        </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {video.description}
-                        </p>
-                      </div>
-                      <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-primary-600 flex-shrink-0 mt-1 transition-colors" />
-                    </div>
-                    <div className="mt-4 inline-flex items-center gap-2 text-primary-600 font-medium text-sm group-hover:text-primary-700">
-                      <Play className="w-4 h-4" />
-                      Watch / Download
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* YouTube Videos */}
-      {youtubeVideos.length > 0 && (
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="section-heading text-center mb-10">
-              On YouTube
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {youtubeVideos.map((video) => (
-                <div
-                  key={video.embedId}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-                >
-                  <div className="aspect-video relative">
-                    {playingYT === video.embedId ? (
-                      <iframe
-                        src={`https://www.youtube.com/embed/${video.embedId}?autoplay=1`}
-                        title={video.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full"
-                      />
-                    ) : video.thumbnail ? (
-                      <button
-                        onClick={() => setPlayingYT(video.embedId)}
-                        className="w-full h-full relative group cursor-pointer"
-                      >
+      {/* All Videos — sorted by year, newest first */}
+      <section className="py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-10">
+            {allVideos.map((video) => (
+              <div
+                key={`${video.title}-${video.year}`}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-primary-100 hover:shadow-lg transition-all"
+              >
+                {/* Video / Thumbnail */}
+                <div className="relative aspect-[3/4] sm:aspect-[2/3] md:aspect-video bg-gradient-to-br from-primary-900 to-primary-950">
+                  {video.type === "youtube" && playingYT === video.embedId ? (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.embedId}?autoplay=1`}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  ) : (
+                    <a
+                      href={video.type === "mega" ? video.url : undefined}
+                      target={video.type === "mega" ? "_blank" : undefined}
+                      rel={video.type === "mega" ? "noopener noreferrer" : undefined}
+                      onClick={
+                        video.type === "youtube"
+                          ? (e) => {
+                              e.preventDefault();
+                              setPlayingYT(video.embedId!);
+                            }
+                          : undefined
+                      }
+                      className="block w-full h-full relative group cursor-pointer"
+                    >
+                      {video.thumbnail && (
                         <img
                           src={video.thumbnail}
                           alt={video.title}
-                          className="w-full h-full object-contain bg-gradient-to-br from-primary-800 to-primary-950 group-hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                         />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors shadow-lg">
-                            <Play className="w-8 h-8 text-white ml-1" />
-                          </div>
+                      )}
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                        <div className="w-16 h-16 bg-white/25 rounded-full flex items-center justify-center group-hover:bg-white/40 transition-colors">
+                          <Play className="w-8 h-8 text-white ml-1" />
                         </div>
-                      </button>
-                    ) : (
-                      <iframe
-                        src={`https://www.youtube.com/embed/${video.embedId}`}
-                        title={video.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full"
-                      />
-                    )}
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-display font-bold text-gray-900">
+                      </div>
+                    </a>
+                  )}
+                </div>
+
+                {/* Info */}
+                <div className="p-5 flex items-center justify-between">
+                  <div>
+                    <h3 className="font-display text-xl font-bold text-gray-900">
                       {video.title}
                     </h3>
+                    <span className="text-sm text-gray-500">{video.year}</span>
                   </div>
+                  {video.type === "mega" && (
+                    <a
+                      href={video.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-600 hover:text-primary-700 transition-colors"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
-      )}
-
-      {/* Local Video Files */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {videos.length > 0 && (
-            <h2 className="section-heading text-center mb-10">
-              More Clips
-            </h2>
-          )}
-          {videos.length === 0 && featuredVideos.length === 0 ? (
-            <div className="text-center py-20">
-              <VideoOff className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <h3 className="text-xl font-display font-bold text-gray-500 mb-2">
-                No videos yet
-              </h3>
-              <p className="text-gray-400 max-w-md mx-auto">
-                Add your video files to the{" "}
-                <code className="bg-gray-100 px-2 py-1 rounded text-sm">
-                  /public/videos
-                </code>{" "}
-                folder and they will appear here automatically.
-              </p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {videos.map((video) => (
-                <div
-                  key={video.src}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-                >
-                  <video
-                    controls
-                    className="w-full aspect-video bg-black"
-                    preload="metadata"
-                  >
-                    <source src={video.src} />
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="p-4">
-                    <h3 className="font-display font-bold text-gray-900">
-                      {video.name.replace(/\.[^/.]+$/, "").replace(/[-_]/g, " ")}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </section>
     </>
