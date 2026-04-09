@@ -60,10 +60,6 @@ export default function GalleryPage() {
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Photo Gallery
           </h1>
-          <p className="text-primary-200 max-w-xl mx-auto text-lg">
-            Browse through photos and pictures from our rehearsals,
-            performances, and events.
-          </p>
         </div>
       </section>
 
