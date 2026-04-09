@@ -13,10 +13,6 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Contact Us
           </h1>
-          <p className="text-primary-200 max-w-xl mx-auto text-lg">
-            Interested in joining or attending a performance? We would love
-            to hear from you!
-          </p>
         </div>
       </section>
 
