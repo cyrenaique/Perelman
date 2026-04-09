@@ -18,9 +18,6 @@ export default function AboutPage() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            <h2 className="font-display text-3xl font-bold text-gray-900 mb-6">
-              Who We Are
-            </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
               <strong>Amateur Theatre in English Perelman</strong> is a vibrant
               community of theatre enthusiasts based in Strasbourg, France, who share
