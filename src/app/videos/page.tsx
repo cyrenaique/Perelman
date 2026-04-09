@@ -58,9 +58,6 @@ export default function VideosPage() {
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Videos
           </h1>
-          <p className="text-primary-200 max-w-xl mx-auto text-lg">
-            Watch recordings of our performances.
-          </p>
         </div>
       </section>
 
