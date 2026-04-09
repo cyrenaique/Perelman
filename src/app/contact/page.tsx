@@ -21,9 +21,6 @@ export default function ContactPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
             <div>
-              <h2 className="font-display text-2xl font-bold text-gray-900 mb-6">
-                Get in Touch
-              </h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
