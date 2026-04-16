@@ -6,7 +6,7 @@ export default function Footer() {
           <img
             src="/pictures/elephant.jpeg"
             alt="Perelman Theatre Mascot"
-            className="w-10 h-10 rounded-lg object-cover"
+            className="w-12 h-10 rounded-full object-cover"
           />
           <span>&copy; {new Date().getFullYear()} Amateur Theatre in English Perelman.</span>
         </div>
