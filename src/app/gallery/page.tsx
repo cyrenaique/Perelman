@@ -22,7 +22,7 @@ export default function GalleryPage() {
         const picRes = await fetch("/api/media?folder=pictures");
         if (picRes.ok) {
           const data = await picRes.json();
-          allImages.push(...data.files);
+          allImages.push(...data.files.filter((f: ImageFile) => f.name !== "elephant.jpeg"));
         }
       } catch {}
 
