@@ -23,7 +23,7 @@ export default function HomePage() {
           <img
             src="/pictures/elephant.jpeg"
             alt="Perelman Theatre Mascot"
-            className="w-48 h-20 md:w-64 md:h-28 rounded-full object-cover mx-auto mb-8 opacity-70"
+            className="w-32 h-32 md:w-44 md:h-44 rounded-full object-cover mx-auto mb-8 opacity-70"
           />
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
             Amateur Theatre
