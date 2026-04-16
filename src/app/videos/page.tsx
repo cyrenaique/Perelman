@@ -9,6 +9,7 @@ interface PerformanceVideo {
   thumbnail?: string;
   type: "mega" | "youtube";
   url?: string;
+  altUrl?: string;
   embedId?: string;
 }
 
@@ -19,6 +20,7 @@ const allVideos: PerformanceVideo[] = ([
     thumbnail: "/pictures/affiche.png",
     type: "mega" as const,
     url: "https://mega.nz/file/Y012ULhC#zr8jM7l64D3UuecKhBPKBK9SM4eY2WhkoLt571SNjlE",
+    altUrl: "https://disk.yandex.com/i/ChLGlZWyI9tsRA",
   },
   {
     title: "The Sound of Music",
@@ -26,6 +28,7 @@ const allVideos: PerformanceVideo[] = ([
     thumbnail: "/pictures/SofM2bt_2024.png",
     type: "mega" as const,
     url: "https://mega.nz/file/Fwlj2Joa#7wla3akaxZEC0fzyY3FwPJdwr_pXhnz8aG-Y358KtKs",
+    altUrl: "https://disk.yandex.com/i/7_mvceroOnMd6Q",
   },
   {
     title: "Mary Poppins",
@@ -120,14 +123,26 @@ export default function VideosPage() {
                     <span className="text-sm text-gray-500">{video.year}</span>
                   </div>
                   {video.type === "mega" && (
-                    <a
-                      href={video.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-600 hover:text-primary-700 transition-colors"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
+                    <div className="flex items-center gap-3">
+                      <a
+                        href={video.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1"
+                      >
+                        Mega.nz <ExternalLink className="w-4 h-4" />
+                      </a>
+                      {video.altUrl && (
+                        <a
+                          href={video.altUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs font-medium text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1"
+                        >
+                          Yandex <ExternalLink className="w-4 h-4" />
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>
