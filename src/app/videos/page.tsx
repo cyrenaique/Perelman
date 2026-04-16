@@ -36,6 +36,7 @@ const allVideos: PerformanceVideo[] = ([
     thumbnail: "/pictures/poppins_2022.jpeg",
     type: "youtube" as const,
     embedId: "1oQnhDqd2ZU",
+    altUrl: "https://disk.yandex.com/i/uWyH1JS-m85P_A",
   },
   {
     title: "The Canterville Ghost",
@@ -43,6 +44,7 @@ const allVideos: PerformanceVideo[] = ([
     thumbnail: "/pictures/canter2019.png",
     type: "youtube" as const,
     embedId: "jxfXngq85Is",
+    altUrl: "https://disk.yandex.com/i/aeymCTsBxcT5LA",
   },
 ] as PerformanceVideo[]).sort((a, b) => b.year - a.year);
 
@@ -122,16 +124,18 @@ export default function VideosPage() {
                     </h3>
                     <span className="text-sm text-gray-500">{video.year}</span>
                   </div>
-                  {video.type === "mega" && (
+                  {(video.type === "mega" || video.altUrl) && (
                     <div className="flex items-center gap-3">
-                      <a
-                        href={video.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1"
-                      >
-                        Mega.nz <ExternalLink className="w-4 h-4" />
-                      </a>
+                      {video.url && (
+                        <a
+                          href={video.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs font-medium text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1"
+                        >
+                          Mega.nz <ExternalLink className="w-4 h-4" />
+                        </a>
+                      )}
                       {video.altUrl && (
                         <a
                           href={video.altUrl}
