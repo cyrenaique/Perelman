@@ -21,6 +21,7 @@ const allVideos: PerformanceVideo[] = ([
     type: "mega" as const,
     url: "https://mega.nz/file/Y012ULhC#zr8jM7l64D3UuecKhBPKBK9SM4eY2WhkoLt571SNjlE",
     altUrl: "https://disk.yandex.com/i/ChLGlZWyI9tsRA",
+    embedId: "jrUt3M_5vE4",
   },
   {
     title: "The Sound of Music",
