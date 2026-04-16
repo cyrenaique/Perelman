@@ -24,6 +24,11 @@ export default function Header() {
             <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center group-hover:bg-primary-100 transition-colors shadow-md">
               <span className="font-math text-2xl font-bold text-primary-800">&pi;</span>
             </div>
+            <img
+              src="/pictures/elephant.jpeg"
+              alt="Perelman Theatre Mascot"
+              className="w-10 h-10 rounded-lg object-cover shadow-sm"
+            />
             <div>
               <span className="font-display text-xl font-bold text-white block leading-tight">
                 Perelman Theatre
