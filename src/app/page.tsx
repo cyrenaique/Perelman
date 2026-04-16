@@ -3,16 +3,27 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950 text-white overflow-hidden">
-        {/* Math symbols background */}
+        {/* Perelman formulas background — Ricci flow & Poincaré conjecture */}
         <div className="absolute inset-0 overflow-hidden select-none pointer-events-none">
-          <div className="absolute top-10 left-[5%] font-math text-8xl text-white/[0.04] rotate-12">&pi;</div>
-          <div className="absolute top-20 right-[10%] font-math text-7xl text-white/[0.04] -rotate-6">&#x222B;</div>
-          <div className="absolute top-1/2 left-[15%] font-math text-9xl text-white/[0.03] rotate-3">&Sigma;</div>
-          <div className="absolute bottom-20 right-[20%] font-math text-8xl text-white/[0.04] -rotate-12">&infin;</div>
-          <div className="absolute bottom-10 left-[40%] font-math text-6xl text-white/[0.03] rotate-6">&Delta;</div>
-          <div className="absolute top-1/3 right-[5%] font-math text-7xl text-white/[0.03] rotate-12">&radic;</div>
-          <div className="absolute top-10 left-[60%] font-math text-5xl text-white/[0.04] -rotate-3">&Omega;</div>
-          <div className="absolute bottom-1/3 left-[8%] font-math text-6xl text-white/[0.04] rotate-6">&theta;</div>
+          {/* Ricci flow equation */}
+          <div className="absolute top-8 left-[3%] font-math text-lg md:text-xl text-white/[0.06] rotate-2">∂g/∂t = −2Ric(g)</div>
+          {/* Perelman's W-entropy functional */}
+          <div className="absolute top-20 right-[5%] font-math text-base md:text-lg text-white/[0.05] -rotate-3">W(g,f,τ) = ∫ [τ(|∇f|² + R) + f − n] (4πτ)⁻ⁿ/² e⁻ᶠ dV</div>
+          {/* Ricci tensor symbol */}
+          <div className="absolute top-1/3 left-[8%] font-math text-7xl text-white/[0.03] rotate-6">Ric</div>
+          {/* Surgery formula hint */}
+          <div className="absolute top-[45%] right-[8%] font-math text-sm md:text-base text-white/[0.05] -rotate-2">R ≥ −6/(4t+1)</div>
+          {/* Scalar curvature evolution */}
+          <div className="absolute bottom-[35%] left-[12%] font-math text-sm md:text-base text-white/[0.06] rotate-1">∂R/∂t = ΔR + 2|Ric|²</div>
+          {/* Pi_1(M) = 0 — simply connected */}
+          <div className="absolute bottom-20 right-[15%] font-math text-2xl md:text-3xl text-white/[0.04] -rotate-6">π₁(M³) = 0</div>
+          {/* Volume comparison */}
+          <div className="absolute bottom-10 left-[30%] font-math text-sm text-white/[0.05] rotate-3">Vol(B(p,r)) ≥ c·rⁿ</div>
+          {/* Toponogov comparison */}
+          <div className="absolute top-[15%] left-[45%] font-math text-base text-white/[0.04] -rotate-1">κ(x,t) ≤ C/(t+1)</div>
+          {/* Classic symbols */}
+          <div className="absolute top-12 left-[5%] font-math text-6xl text-white/[0.03] rotate-12">∫</div>
+          <div className="absolute bottom-1/3 right-[3%] font-math text-5xl text-white/[0.03] rotate-8">∞</div>
         </div>
         {/* Glow effects */}
         <div className="absolute inset-0 opacity-10">
