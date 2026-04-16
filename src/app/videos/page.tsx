@@ -29,13 +29,14 @@ const allVideos: PerformanceVideo[] = ([
     type: "mega" as const,
     url: "https://mega.nz/file/Fwlj2Joa#7wla3akaxZEC0fzyY3FwPJdwr_pXhnz8aG-Y358KtKs",
     altUrl: "https://disk.yandex.com/i/7_mvceroOnMd6Q",
+    embedId: "A_0WAcgdKxE",
   },
   {
     title: "Mary Poppins",
     year: 2022,
     thumbnail: "/pictures/poppins_2022.jpeg",
     type: "youtube" as const,
-    embedId: "1oQnhDqd2ZU",
+    embedId: "NhTQmyRHvEo",
     altUrl: "https://disk.yandex.com/i/uWyH1JS-m85P_A",
   },
   {
@@ -43,7 +44,7 @@ const allVideos: PerformanceVideo[] = ([
     year: 2019,
     thumbnail: "/pictures/canter2019.png",
     type: "youtube" as const,
-    embedId: "jxfXngq85Is",
+    embedId: "83I2kqjJlN0",
     altUrl: "https://disk.yandex.com/i/aeymCTsBxcT5LA",
   },
 ] as PerformanceVideo[]).sort((a, b) => b.year - a.year);
@@ -77,7 +78,7 @@ export default function VideosPage() {
               >
                 {/* Video / Thumbnail */}
                 <div className="relative aspect-[3/4] sm:aspect-[2/3] md:aspect-video bg-gradient-to-br from-primary-900 to-primary-950">
-                  {video.type === "youtube" && playingYT === video.embedId ? (
+                  {video.embedId && playingYT === video.embedId ? (
                     <iframe
                       src={`https://www.youtube.com/embed/${video.embedId}?autoplay=1`}
                       title={video.title}
@@ -87,11 +88,11 @@ export default function VideosPage() {
                     />
                   ) : (
                     <a
-                      href={video.type === "mega" ? video.url : undefined}
-                      target={video.type === "mega" ? "_blank" : undefined}
-                      rel={video.type === "mega" ? "noopener noreferrer" : undefined}
+                      href={video.type === "mega" && !video.embedId ? video.url : undefined}
+                      target={video.type === "mega" && !video.embedId ? "_blank" : undefined}
+                      rel={video.type === "mega" && !video.embedId ? "noopener noreferrer" : undefined}
                       onClick={
-                        video.type === "youtube"
+                        video.embedId
                           ? (e) => {
                               e.preventDefault();
                               setPlayingYT(video.embedId!);
