@@ -6,7 +6,7 @@ export default function HomePage() {
         {/* Perelman formulas background — Ricci flow & Poincaré conjecture */}
         <div className="absolute inset-0 overflow-hidden select-none pointer-events-none">
           {/* Ricci flow equation */}
-          <div className="absolute top-8 left-[3%] font-math text-lg md:text-xl text-white/[0.12] rotate-2">∂gᵢⱼ/∂t = −2Rᵢⱼ</div>
+          <div className="absolute top-8 left-[15%] font-math text-lg md:text-xl text-white/[0.12] rotate-2">∂gᵢⱼ/∂t = −2Rᵢⱼ</div>
           {/* Perelman's W-entropy functional */}
           <div className="absolute top-20 right-[5%] font-math text-base md:text-lg text-white/[0.10] -rotate-3">W(g,f,τ) = ∫ [τ(|∇f|² + R) + f − n] (4πτ)⁻ⁿ/² e⁻ᶠ dV</div>
           {/* Ricci tensor symbol */}
