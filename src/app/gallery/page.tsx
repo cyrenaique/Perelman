@@ -42,7 +42,13 @@ export default function GalleryPage() {
         return numA - numB;
       });
 
-      setImages(allImages);
+      // Label all photos except last 4 as "The Sound of Music 2026"
+      const labeled = allImages.map((img, i) => ({
+        ...img,
+        name: i < allImages.length - 4 ? "The Sound of Music 2026" : img.name,
+      }));
+
+      setImages(labeled);
     };
 
     loadImages();
