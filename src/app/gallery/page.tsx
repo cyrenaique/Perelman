@@ -35,6 +35,13 @@ export default function GalleryPage() {
         }
       } catch {}
 
+      // Sort numerically by filename (1.jpeg, 2.jpeg, ... 10.jpeg, ...)
+      allImages.sort((a, b) => {
+        const numA = parseFloat(a.name.replace(/[^0-9.]/g, '')) || Infinity;
+        const numB = parseFloat(b.name.replace(/[^0-9.]/g, '')) || Infinity;
+        return numA - numB;
+      });
+
       setImages(allImages);
     };
 
