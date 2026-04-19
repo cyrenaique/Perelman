@@ -19,7 +19,7 @@ const albums: Album[] = [
   },
   {
     title: "The Canterville Ghost 2019",
-    cover: "/pictures/canter2019.png",
+    cover: "/pictures/canter_2019.png",
     url: "https://disk.yandex.com/d/AYLKMIh1dHmDBA",
   },
 ];

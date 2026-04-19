@@ -43,7 +43,7 @@ const allVideos: PerformanceVideo[] = ([
   {
     title: "The Canterville Ghost",
     year: 2019,
-    thumbnail: "/pictures/canter2019.png",
+    thumbnail: "/pictures/canter_2019.png",
     type: "youtube" as const,
     embedId: "83I2kqjJlN0",
     altUrl: "https://disk.yandex.com/i/aeymCTsBxcT5LA",
