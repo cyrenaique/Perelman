@@ -17,7 +17,7 @@ const allVideos: PerformanceVideo[] = ([
   {
     title: "The Sound of Music",
     year: 2026,
-    thumbnail: "/pictures/affiche.png",
+    thumbnail: "/pictures/affiche_2026.png",
     type: "mega" as const,
     url: "https://mega.nz/file/Y012ULhC#zr8jM7l64D3UuecKhBPKBK9SM4eY2WhkoLt571SNjlE",
     altUrl: "https://disk.yandex.com/i/ChLGlZWyI9tsRA",
