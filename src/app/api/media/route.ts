@@ -7,12 +7,15 @@ const VIDEO_EXTENSIONS = [".mp4", ".webm", ".ogg", ".mov"];
 
 export async function GET(request: NextRequest) {
   const folder = request.nextUrl.searchParams.get("folder");
+  const subfolder = request.nextUrl.searchParams.get("subfolder");
 
   if (!folder || !["pictures", "photos", "videos"].includes(folder)) {
     return NextResponse.json({ error: "Invalid folder" }, { status: 400 });
   }
 
-  const publicDir = path.join(process.cwd(), "public", folder);
+  const publicDir = subfolder
+    ? path.join(process.cwd(), "public", folder, subfolder)
+    : path.join(process.cwd(), "public", folder);
 
   if (!fs.existsSync(publicDir)) {
     return NextResponse.json({ files: [] });
@@ -30,7 +33,7 @@ export async function GET(request: NextRequest) {
     .sort()
     .map((file) => ({
       name: file,
-      src: `/${folder}/${file}`,
+      src: subfolder ? `/${folder}/${subfolder}/${file}` : `/${folder}/${file}`,
     }));
 
   return NextResponse.json({ files });
