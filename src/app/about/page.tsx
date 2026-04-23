@@ -28,19 +28,31 @@ const content: Record<Lang, JSX.Element> = {
   Français: (
     <>
       <p className="text-gray-600 leading-relaxed mb-6">
-        <strong>Amateur Theatre in English &quot;Perelman&quot;</strong> est un petit groupe d&apos;enfants et de leurs parents, avec de petites ambitions et de petites prétentions.
+        <strong>Le Théâtre Amateur en Anglais &quot;Perelman&quot;</strong> est un petit groupe d&apos;enfants et de parents, doté de modestes ambitions et de peu de prétentions.
       </p>
       <p className="text-gray-600 leading-relaxed mb-6">
-        Notre premier spectacle a été créé en 2019 — nous sommes relativement nouveaux sur cette scène et nous n&apos;avons réalisé que quelques projets pour l&apos;instant. Chaque projet est exceptionnellement précieux pour nous, car il est entièrement créé à partir de nos idées, de nos propres mains. Habituellement, nous prenons une histoire connue et, après avoir lu toute la littérature disponible et regardé tout ce que nous pouvons trouver sur l&apos;œuvre, nous modifions les dialogues — si ce n&apos;est complètement, alors radicalement — en y ajoutant des extraits de nos films, livres et pensées préférés. Les meilleures blagues et idées pour les spectacles sont inventées par les acteurs et leurs parents.
+        Notre premier spectacle a vu le jour en 2019 ; nous sommes donc relativement nouveaux sur cette scène avec seulement quelques projets à notre actif. Chaque projet nous est infiniment précieux, car il est le fruit de nos propres idées et de nos propres mains. En général, nous partons d&apos;une intrigue connue et, après avoir exploré toute la documentation et les informations disponibles sur l&apos;œuvre, nous modifions radicalement — si ce n&apos;est totalement — les dialogues. Nous y intégrons des clins d&apos;œil à nos films et livres préférés, ainsi que nos propres réflexions. Les meilleures blagues et idées de mise en scène sont imaginées par les acteurs et leurs parents.
+      </p>
+      <h3 className="font-display font-bold text-gray-800 text-lg mb-3">L&apos;organisation et l&apos;esprit d&apos;équipe</h3>
+      <p className="text-gray-600 leading-relaxed mb-6">
+        La responsable de la troupe est Evguenia Efanova-Augier, professeure d&apos;anglais. En plus de l&apos;écriture et de la mise en scène, elle tente également de s&apos;occuper des accessoires, de la construction des décors et de l&apos;organisation générale. Comme elle n&apos;a aucune compétence technique dans ces domaines, les parents finissent par intervenir au moment opportun et, par miracle, tout finit par fonctionner.
+      </p>
+      <p className="text-gray-600 leading-relaxed mb-4">
+        Les enfants sont, bien sûr, admirables.
       </p>
       <p className="text-gray-600 leading-relaxed mb-6">
-        La responsable du groupe théâtral est la professeure d&apos;anglais Evgenia Efanova-Auger. En plus de l&apos;écriture des scénarios et de la mise en scène, elle essaie également de gérer les accessoires, la construction des décors et l&apos;organisation de l&apos;ensemble de l&apos;événement. Elle n&apos;est particulièrement douée pour rien de tout cela, alors au bon moment les parents interviennent et, par miracle, tout fonctionne. Les enfants — nos acteurs — méritent certainement l&apos;admiration, mais leurs parents ne la méritent pas moins, et souvent une médaille « Pour le Courage » également. Notre gratitude envers chaque parent qui investit efforts, temps, argent, nerfs et soins dans le projet est sans limites et bien méritée. Les parents des acteurs sont les piliers sur lesquels repose notre château de cartes. Et naturellement, les enfants sont la raison, le fondement et le sens de tout ce que nous entreprenons.
+        Les parents méritent tout autant d&apos;admiration, et souvent même une médaille « pour le courage ».
       </p>
       <p className="text-gray-600 leading-relaxed mb-6">
-        Nos répétitions sont très bruyantes. Les répétitions sont un lieu de socialisation pour les enfants, un lieu pour créer quelque chose de commun, quelque chose — nous le croyons — de beau et de nécessaire. À de rares exceptions près, le bruit est un indicateur que les enfants passent un bon moment, et cela n&apos;est pas moins important que la première du spectacle.
+        Notre gratitude envers chaque parent qui investit son énergie, son temps, ses finances et ses nerfs dans ce projet est immense et amplement justifiée. Les parents sont les piliers sur lesquels repose notre château de cartes. Et, naturellement, les enfants sont la raison d&apos;être, le fondement et le sens même de toute cette aventure.
       </p>
+      <h3 className="font-display font-bold text-gray-800 text-lg mb-3">Plus qu&apos;une simple répétition</h3>
+      <p className="text-gray-600 leading-relaxed mb-6">
+        Nos répétitions sont très bruyantes. C&apos;est avant tout un espace d&apos;échange pour les enfants, un lieu où l&apos;on crée ensemble quelque chose que nous espérons beau et utile. À de rares exceptions près, le bruit est l&apos;indicateur que les enfants passent un bon moment, ce qui est tout aussi important pour nous que la première du spectacle.
+      </p>
+      <h3 className="font-display font-bold text-gray-800 text-lg mb-3">Le saviez-vous ?</h3>
       <p className="text-gray-600 leading-relaxed">
-        Quel est notre lien avec le remarquable Grigori Perelman, le mathématicien dont le théâtre porte le nom ? Absolument aucun ! Nous nous permettons simplement d&apos;être fiers d&apos;être ses contemporains.
+        Quel est notre lien avec l&apos;étonnant Grigori Perelman, le mathématicien dont le théâtre porte le nom ? Absolument aucun ! Nous nous permettons simplement d&apos;être fiers d&apos;être ses contemporains.
       </p>
     </>
   ),
