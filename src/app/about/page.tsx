@@ -33,7 +33,6 @@ const content: Record<Lang, JSX.Element> = {
       <p className="text-gray-600 leading-relaxed mb-6">
         Notre premier spectacle a vu le jour en 2019 ; nous sommes donc relativement nouveaux sur cette scène avec seulement quelques projets à notre actif. Chaque projet nous est infiniment précieux, car il est le fruit de nos propres idées et de nos propres mains. En général, nous partons d&apos;une intrigue connue et, après avoir exploré toute la documentation et les informations disponibles sur l&apos;œuvre, nous modifions radicalement — si ce n&apos;est totalement — les dialogues. Nous y intégrons des clins d&apos;œil à nos films et livres préférés, ainsi que nos propres réflexions. Les meilleures blagues et idées de mise en scène sont imaginées par les acteurs et leurs parents.
       </p>
-      <h3 className="font-display font-bold text-gray-800 text-lg mb-3">L&apos;organisation et l&apos;esprit d&apos;équipe</h3>
       <p className="text-gray-600 leading-relaxed mb-6">
         La responsable de la troupe est Evguenia Efanova-Ogier, professeure d&apos;anglais. En plus de l&apos;écriture et de la mise en scène, elle tente également de s&apos;occuper des accessoires, de la construction des décors et de l&apos;organisation générale. Comme elle n&apos;a aucune compétence technique dans ces domaines, les parents finissent par intervenir au moment opportun et, par miracle, tout finit par fonctionner.
       </p>
