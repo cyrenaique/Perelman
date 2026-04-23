@@ -35,7 +35,7 @@ const content: Record<Lang, JSX.Element> = {
       </p>
       <h3 className="font-display font-bold text-gray-800 text-lg mb-3">L&apos;organisation et l&apos;esprit d&apos;équipe</h3>
       <p className="text-gray-600 leading-relaxed mb-6">
-        La responsable de la troupe est Evguenia Efanova-Augier, professeure d&apos;anglais. En plus de l&apos;écriture et de la mise en scène, elle tente également de s&apos;occuper des accessoires, de la construction des décors et de l&apos;organisation générale. Comme elle n&apos;a aucune compétence technique dans ces domaines, les parents finissent par intervenir au moment opportun et, par miracle, tout finit par fonctionner.
+        La responsable de la troupe est Evguenia Efanova-Ogier, professeure d&apos;anglais. En plus de l&apos;écriture et de la mise en scène, elle tente également de s&apos;occuper des accessoires, de la construction des décors et de l&apos;organisation générale. Comme elle n&apos;a aucune compétence technique dans ces domaines, les parents finissent par intervenir au moment opportun et, par miracle, tout finit par fonctionner.
       </p>
       <p className="text-gray-600 leading-relaxed mb-4">
         Les enfants sont, bien sûr, admirables.
@@ -46,11 +46,9 @@ const content: Record<Lang, JSX.Element> = {
       <p className="text-gray-600 leading-relaxed mb-6">
         Notre gratitude envers chaque parent qui investit son énergie, son temps, ses finances et ses nerfs dans ce projet est immense et amplement justifiée. Les parents sont les piliers sur lesquels repose notre château de cartes. Et, naturellement, les enfants sont la raison d&apos;être, le fondement et le sens même de toute cette aventure.
       </p>
-      <h3 className="font-display font-bold text-gray-800 text-lg mb-3">Plus qu&apos;une simple répétition</h3>
       <p className="text-gray-600 leading-relaxed mb-6">
         Nos répétitions sont très bruyantes. C&apos;est avant tout un espace d&apos;échange pour les enfants, un lieu où l&apos;on crée ensemble quelque chose que nous espérons beau et utile. À de rares exceptions près, le bruit est l&apos;indicateur que les enfants passent un bon moment, ce qui est tout aussi important pour nous que la première du spectacle.
       </p>
-      <h3 className="font-display font-bold text-gray-800 text-lg mb-3">Le saviez-vous ?</h3>
       <p className="text-gray-600 leading-relaxed">
         Quel est notre lien avec l&apos;étonnant Grigori Perelman, le mathématicien dont le théâtre porte le nom ? Absolument aucun ! Nous nous permettons simplement d&apos;être fiers d&apos;être ses contemporains.
       </p>
