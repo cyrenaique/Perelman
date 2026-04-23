@@ -9,19 +9,19 @@ const content: Record<Lang, JSX.Element> = {
   English: (
     <>
       <p className="text-gray-600 leading-relaxed mb-6">
-        <strong>Amateur Theatre in English &quot;Perelman&quot;</strong> is a small group of children and their parents, with small ambitions and small pretensions.
+        <strong>Amateur Theatre in English &quot;Perelman&quot;</strong> is a small group of children and their parents, with modest ambitions and modest expectations.
       </p>
       <p className="text-gray-600 leading-relaxed mb-6">
-        Our first show was created in 2019 — we are relatively new to this stage and have only completed a few projects so far. Each project is exceptionally valuable to us because it is created entirely from our ideas, by our own hands. Usually we take a well-known story and, after reading all available literature and watching everything we can find about the work, we change the dialogues — if not completely, then radically — adding bits from our favourite films, books, and thoughts. The best jokes and ideas for the shows are invented by the actors and their parents.
+        Our first production was staged in 2019 — we are relatively new to this scene and have only brought a few projects to life so far. Every project is exceptionally precious to us, because it is built entirely from our own ideas and by our own hands. We typically take a well-known story and, after reading all the literature we can find and exploring every available resource about the work, we radically — if not entirely — rewrite the dialogues and weave in favourite moments from films, books, and our own thoughts. The best jokes and ideas for our shows come from the actors and their parents.
       </p>
       <p className="text-gray-600 leading-relaxed mb-6">
-        The head of the theatre group is English teacher Evgenia Efanova-Auger. In addition to writing scripts and directing, she also tries to manage props, set construction, and the organisation of the whole event. She is not particularly skilled at any of this, so at the right moment the parents step in and somehow, miraculously, everything works out. The children — our actors — certainly deserve admiration, but their parents deserve no less, and often a medal &quot;For Bravery&quot; as well. Our gratitude to every parent who invests effort, time, money, nerves, and care into the project is boundless and well-deserved. The parents of the actors are the pillars on which our house of cards stands. And naturally, the children are the reason, the foundation, and the meaning behind everything we do.
+        The director of the theatre group is English language teacher Evgenia Efanova-Ogier. In addition to writing scripts and directing, she also attempts to handle props, set construction, and the general organisation of the whole affair. She has no particular skill in any of these areas, so at the critical moment the parents step in and, somehow, everything comes together. The children — our actors — are of course wonderful, but their parents deserve no less admiration, and frequently a medal for bravery. Our gratitude to every parent who invests energy, time, money, nerves, and care into each project is boundless and well-deserved. The parents of our actors are the pillars on which our house of cards stands. And naturally, the children themselves are the reason, the foundation, and the whole point of everything we do.
       </p>
       <p className="text-gray-600 leading-relaxed mb-6">
-        Our rehearsals are very noisy. Rehearsals are a place for children to socialise, a place to create something shared, something — we believe — beautiful and necessary. With rare exceptions, the noise is an indicator that the children are having a good time, and that is no less important than the premiere of the show.
+        Our rehearsals are very noisy. Rehearsals are a place where children connect, where something shared is created — something that feels, to us, both beautiful and worthwhile. With rare exceptions, the noise is a sign that the children are having a great time, and that matters no less than the premiere of the play.
       </p>
       <p className="text-gray-600 leading-relaxed">
-        What is our connection to the remarkable Grigori Perelman, the mathematician after whom the theatre is named? Absolutely none! We simply allow ourselves to be proud that we are his contemporaries.
+        What connection do we have to the remarkable mathematician Grigori Perelman, after whom our theatre is named? Absolutely none! We simply allow ourselves the pride of being his contemporaries.
       </p>
     </>
   ),
