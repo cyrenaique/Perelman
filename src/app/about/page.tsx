@@ -28,7 +28,7 @@ const content: Record<Lang, JSX.Element> = {
   Français: (
     <>
       <p className="text-gray-600 leading-relaxed mb-6">
-        <strong>Le Théâtre Amateur en Anglais &quot;Perelman&quot;</strong> est un petit groupe d&apos;enfants et de parents, doté de modestes ambitions et de peu de prétentions.
+        <strong>Le Théâtre Amateur en Anglais &quot;Perelman&quot;</strong> est un petit groupe d&apos;enfants et de parents, doté de modestes ambitions et de modestes prétentions.
       </p>
       <p className="text-gray-600 leading-relaxed mb-6">
         Notre premier spectacle a vu le jour en 2019 ; nous sommes donc relativement nouveaux sur cette scène avec seulement quelques projets à notre actif. Chaque projet nous est infiniment précieux, car il est le fruit de nos propres idées et de nos propres mains. En général, nous partons d&apos;une intrigue connue et, après avoir exploré toute la documentation et les informations disponibles sur l&apos;œuvre, nous modifions radicalement — si ce n&apos;est totalement — les dialogues. Nous y intégrons des clins d&apos;œil à nos films et livres préférés, ainsi que nos propres réflexions. Les meilleures blagues et idées de mise en scène sont imaginées par les acteurs et leurs parents.
