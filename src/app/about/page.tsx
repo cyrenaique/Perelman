@@ -40,7 +40,7 @@ const content: Record<Lang, JSX.Element> = {
       <p className="text-gray-600 leading-relaxed mb-6" style={{ textIndent: "2em" }}>
         Nos répétitions sont très bruyantes. C&apos;est avant tout un espace d&apos;échange pour les enfants, un lieu où l&apos;on crée ensemble quelque chose que nous espérons beau et utile. À de rares exceptions près, le bruit est l&apos;indicateur que les enfants passent un bon moment, ce qui est tout aussi important pour nous que la première du spectacle.
       </p>
-      <p className="text-gray-600 leading-relaxed">
+      <p className="text-gray-600 leading-relaxed" style={{ textIndent: "2em" }}>
         Quel est notre lien avec l&apos;étonnant Grigori Perelman, le mathématicien dont le théâtre porte le nom ? Absolument aucun ! Nous nous permettons simplement d&apos;être fiers d&apos;être ses contemporains.
       </p>
     </>
