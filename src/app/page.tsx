@@ -49,8 +49,11 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-primary-200 max-w-3xl mx-auto mb-4 leading-relaxed">
             Multinational, multicultural association of children aged 5 to 18 and their parents.
           </p>
+          <p className="text-sm md:text-base text-primary-300 max-w-2xl mx-auto mb-2 italic">
+            &quot;The biggest barrier to creativity is the fear of being foolish.&quot; — John Cleese
+          </p>
           <p className="text-sm md:text-base text-primary-300 max-w-2xl mx-auto mb-10 italic">
-            &quot;Theatre is the most transient of arts. A painting lasts, a symphony can be recorded — but a performance disappears the moment it ends.&quot; — Simon Callow
+            &quot;The butterflies never go away. You just learn to make them fly in formation.&quot; — Anonymous
           </p>
         </div>
       </section>
