@@ -1,5 +1,5 @@
 import { Mail, MapPin, Clock } from "lucide-react";
-import TheatreQuotes from "@/components/TheatreQuotes";
+import { theatreQuotes } from "@/components/TheatreQuotes";
 
 export default function ContactPage() {
   return (
@@ -10,14 +10,14 @@ export default function ContactPage() {
           <div className="absolute top-8 left-[8%] font-math text-6xl text-white/[0.04] rotate-12">&#x222B;</div>
           <div className="absolute bottom-4 right-[12%] font-math text-7xl text-white/[0.04] -rotate-6">&theta;</div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
+          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-right">{theatreQuotes[4]}</p>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-center flex-shrink-0">
             Contact Us
           </h1>
+          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-left">{theatreQuotes[5]}</p>
         </div>
       </section>
-
-      <TheatreQuotes indices={[8, 9]} />
 
       {/* Content */}
       <section className="py-16">
@@ -64,7 +64,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <TheatreQuotes indices={[10, 11]} />
     </>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ExternalLink, Play } from "lucide-react";
-import TheatreQuotes from "@/components/TheatreQuotes";
+import { theatreQuotes } from "@/components/TheatreQuotes";
 
 interface PerformanceVideo {
   title: string;
@@ -62,14 +62,14 @@ export default function VideosPage() {
           <div className="absolute top-8 right-[10%] font-math text-7xl text-white/[0.04] rotate-12">&radic;</div>
           <div className="absolute bottom-6 left-[12%] font-math text-6xl text-white/[0.04] -rotate-6">&infin;</div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
+          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-right">{theatreQuotes[6]}</p>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-center flex-shrink-0">
             Videos
           </h1>
+          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-left">{theatreQuotes[7]}</p>
         </div>
       </section>
-
-      <TheatreQuotes indices={[12, 13]} />
 
       {/* All Videos — sorted by year, newest first */}
       <section className="py-16">
@@ -160,7 +160,6 @@ export default function VideosPage() {
         </div>
       </section>
 
-      <TheatreQuotes indices={[14, 15, 16, 17]} />
     </>
   );
 }

@@ -1,4 +1,4 @@
-const allQuotes = [
+export const theatreQuotes = [
   "\u201CTheatre is the most transient of arts. A painting lasts, a symphony can be recorded \u2014 but a performance disappears the moment it ends.\u201D \u2014 Simon Callow",
   "\u201CThe theatre is so endlessly fascinating because it\u2019s so accidental. It\u2019s so much like life.\u201D \u2014 Arthur Miller",
   "\u201CThe play was a great success, but the audience was a disaster.\u201D \u2014 Oscar Wilde",
@@ -18,24 +18,3 @@ const allQuotes = [
   "\u201CSome nights everything aligns \u2014 the actors, the audience, the air itself \u2014 and something happens that cannot be explained.\u201D \u2014 Anonymous",
   "\u201CTheatre is the last truly living art form.\u201D \u2014 Anonymous",
 ];
-
-interface Props {
-  indices: number[];
-}
-
-export default function TheatreQuotes({ indices }: Props) {
-  return (
-    <section className="bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950 py-10 px-4">
-      <div className="max-w-5xl mx-auto flex flex-col gap-4">
-        {indices.map((i) => (
-          <p
-            key={i}
-            className="text-primary-200/70 text-sm md:text-base italic text-center leading-relaxed"
-          >
-            {allQuotes[i]}
-          </p>
-        ))}
-      </div>
-    </section>
-  );
-}

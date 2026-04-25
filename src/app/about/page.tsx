@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import TheatreQuotes from "@/components/TheatreQuotes";
+import { theatreQuotes } from "@/components/TheatreQuotes";
 
 const languages = ["English", "Français", "Русский"] as const;
 type Lang = (typeof languages)[number];
@@ -78,14 +78,14 @@ export default function AboutPage() {
           <div className="absolute top-6 right-[10%] font-math text-7xl text-white/[0.04] -rotate-6">&pi;</div>
           <div className="absolute bottom-6 left-[15%] font-math text-6xl text-white/[0.04] rotate-12">&Sigma;</div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
+          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-right">{theatreQuotes[2]}</p>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-center flex-shrink-0">
             About Us
           </h1>
+          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-left">{theatreQuotes[3]}</p>
         </div>
       </section>
-
-      <TheatreQuotes indices={[4, 5]} />
 
       {/* Content */}
       <section className="py-16">
@@ -112,8 +112,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <TheatreQuotes indices={[6, 7]} />
     </>
   );
 }
