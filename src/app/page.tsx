@@ -46,13 +46,11 @@ export default function HomePage() {
               <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white to-transparent"></span>
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-primary-200 max-w-2xl mx-auto mb-4 leading-relaxed">
-            A passionate community of theatre lovers bringing the magic of
-            English-language performances to life. Join us on stage or in
-            the audience!
+          <p className="text-lg md:text-xl text-primary-200 max-w-3xl mx-auto mb-4 leading-relaxed">
+            Multinational, multicultural association of children aged 5 to 18 and their parents.
           </p>
-          <p className="font-math text-sm text-primary-400 mb-10 italic">
-            &quot;The proof of great theatre is in the performance&quot;
+          <p className="text-sm md:text-base text-primary-300 max-w-2xl mx-auto mb-10 italic">
+            &quot;Theatre is the most transient of arts. A painting lasts, a symphony can be recorded — but a performance disappears the moment it ends.&quot; — Simon Callow
           </p>
         </div>
       </section>
