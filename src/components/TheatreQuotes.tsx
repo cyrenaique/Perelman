@@ -1,0 +1,41 @@
+const allQuotes = [
+  "\u201CTheatre is the most transient of arts. A painting lasts, a symphony can be recorded \u2014 but a performance disappears the moment it ends.\u201D \u2014 Simon Callow",
+  "\u201CThe theatre is so endlessly fascinating because it\u2019s so accidental. It\u2019s so much like life.\u201D \u2014 Arthur Miller",
+  "\u201CThe play was a great success, but the audience was a disaster.\u201D \u2014 Oscar Wilde",
+  "\u201CEvery night is different. That\u2019s the glory and the terror of live theatre.\u201D \u2014 Patti LuPone",
+  "\u201CThe audience completes the performance. They are not passive witnesses \u2014 they are co-creators.\u201D \u2014 Anne Bogart",
+  "\u201CThe theatre is life itself \u2014 compressed, heightened, made visible.\u201D \u2014 Eugene O\u2019Neill",
+  "\u201CThe best direction is invisible. When you notice the director, something has gone wrong.\u201D \u2014 Peter Hall",
+  "\u201CCinema can show you the world. Theatre reminds you that you are in it.\u201D \u2014 Anonymous",
+  "\u201CDirecting is about creating conditions in which something surprising and alive can happen.\u201D \u2014 Katie Mitchell",
+  "\u201CThere is nothing like the sound of a live audience. Nothing in the world.\u201D \u2014 Frank Sinatra",
+  "\u201CWhen it works \u2014 truly works \u2014 there is no feeling on earth like it.\u201D \u2014 Kenneth Branagh",
+  "\u201CA play is not a novel. It breathes differently.\u201D \u2014 Tennessee Williams",
+  "\u201CTheatre has outlasted empires, plagues, and revolutions. It will outlast us all.\u201D \u2014 Anonymous",
+  "\u201CYoung actors bring a recklessness to the stage that veterans spend their whole careers trying to recapture.\u201D \u2014 Peter Brook",
+  "\u201CThere are no stars in great theatre \u2014 only constellations.\u201D \u2014 Anonymous",
+  "\u201CThe best ensemble makes the audience forget they are watching individuals at all.\u201D \u2014 Mike Nichols",
+  "\u201CSome nights everything aligns \u2014 the actors, the audience, the air itself \u2014 and something happens that cannot be explained.\u201D \u2014 Anonymous",
+  "\u201CTheatre is the last truly living art form.\u201D \u2014 Anonymous",
+];
+
+interface Props {
+  indices: number[];
+}
+
+export default function TheatreQuotes({ indices }: Props) {
+  return (
+    <section className="bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950 py-10 px-4">
+      <div className="max-w-5xl mx-auto flex flex-col gap-4">
+        {indices.map((i) => (
+          <p
+            key={i}
+            className="text-primary-200/70 text-sm md:text-base italic text-center leading-relaxed"
+          >
+            {allQuotes[i]}
+          </p>
+        ))}
+      </div>
+    </section>
+  );
+}

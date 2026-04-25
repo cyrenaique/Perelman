@@ -1,4 +1,5 @@
 import { Mail, MapPin, Clock } from "lucide-react";
+import TheatreQuotes from "@/components/TheatreQuotes";
 
 export default function ContactPage() {
   return (
@@ -15,6 +16,8 @@ export default function ContactPage() {
           </h1>
         </div>
       </section>
+
+      <TheatreQuotes indices={[2, 7, 9]} />
 
       {/* Content */}
       <section className="py-16">
@@ -60,6 +63,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <TheatreQuotes indices={[8, 10, 15]} />
     </>
   );
 }
