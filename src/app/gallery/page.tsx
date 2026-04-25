@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import TheatreQuotes from "@/components/TheatreQuotes";
+import { theatreQuotes } from "@/components/TheatreQuotes";
 
 interface Album {
   title: string;
@@ -34,14 +34,14 @@ export default function GalleryPage() {
           <div className="absolute top-6 left-[12%] font-math text-7xl text-white/[0.04] rotate-6">&Delta;</div>
           <div className="absolute bottom-4 right-[8%] font-math text-6xl text-white/[0.04] -rotate-12">&Omega;</div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
+          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-right">{theatreQuotes[0]}</p>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-center flex-shrink-0">
             Photo Gallery
           </h1>
+          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-left">{theatreQuotes[1]}</p>
         </div>
       </section>
-
-      <TheatreQuotes indices={[0, 1]} />
 
       {/* Album covers */}
       <section className="py-16">
@@ -72,8 +72,6 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
-
-      <TheatreQuotes indices={[2, 3]} />
     </>
   );
 }
