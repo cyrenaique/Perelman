@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import TheatreQuotes from "@/components/TheatreQuotes";
 
 interface Album {
   title: string;
@@ -40,6 +41,8 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      <TheatreQuotes indices={[0, 3, 14]} />
+
       {/* Album covers */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,6 +72,8 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
+
+      <TheatreQuotes indices={[13, 16, 17]} />
     </>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import TheatreQuotes from "@/components/TheatreQuotes";
 
 const languages = ["English", "Français", "Русский"] as const;
 type Lang = (typeof languages)[number];
@@ -84,6 +85,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <TheatreQuotes indices={[1, 5, 6]} />
+
       {/* Content */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,6 +112,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <TheatreQuotes indices={[4, 11, 12]} />
     </>
   );
 }

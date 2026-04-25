@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ExternalLink, Play } from "lucide-react";
+import TheatreQuotes from "@/components/TheatreQuotes";
 
 interface PerformanceVideo {
   title: string;
@@ -67,6 +68,8 @@ export default function VideosPage() {
           </h1>
         </div>
       </section>
+
+      <TheatreQuotes indices={[9, 10, 11]} />
 
       {/* All Videos — sorted by year, newest first */}
       <section className="py-16">
@@ -156,6 +159,8 @@ export default function VideosPage() {
           </div>
         </div>
       </section>
+
+      <TheatreQuotes indices={[2, 6, 17]} />
     </>
   );
 }
