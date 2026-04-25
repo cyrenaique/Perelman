@@ -41,7 +41,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <TheatreQuotes indices={[0, 3, 14]} />
+      <TheatreQuotes indices={[0, 1]} />
 
       {/* Album covers */}
       <section className="py-16">
@@ -73,7 +73,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <TheatreQuotes indices={[13, 16, 17]} />
+      <TheatreQuotes indices={[2, 3]} />
     </>
   );
 }

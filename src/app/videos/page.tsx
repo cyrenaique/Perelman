@@ -69,7 +69,7 @@ export default function VideosPage() {
         </div>
       </section>
 
-      <TheatreQuotes indices={[9, 10, 11]} />
+      <TheatreQuotes indices={[12, 13]} />
 
       {/* All Videos — sorted by year, newest first */}
       <section className="py-16">
@@ -160,7 +160,7 @@ export default function VideosPage() {
         </div>
       </section>
 
-      <TheatreQuotes indices={[2, 6, 17]} />
+      <TheatreQuotes indices={[14, 15, 16, 17]} />
     </>
   );
 }
