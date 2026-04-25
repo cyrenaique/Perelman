@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { theatreQuotes } from "@/components/TheatreQuotes";
+import { theatreQuotes, QuotesSection } from "@/components/TheatreQuotes";
 
 const languages = ["English", "Français", "Русский"] as const;
 type Lang = (typeof languages)[number];
@@ -112,6 +112,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <QuotesSection indices={[11, 12, 13]} />
     </>
   );
 }

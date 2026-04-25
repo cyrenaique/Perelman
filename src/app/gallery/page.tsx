@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import { theatreQuotes } from "@/components/TheatreQuotes";
+import { theatreQuotes, QuotesSection } from "@/components/TheatreQuotes";
 
 interface Album {
   title: string;
@@ -72,6 +72,8 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
+
+      <QuotesSection indices={[8, 9, 10]} />
     </>
   );
 }
