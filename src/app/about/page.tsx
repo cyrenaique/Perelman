@@ -85,7 +85,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <TheatreQuotes indices={[1, 5, 6]} />
+      <TheatreQuotes indices={[4, 5]} />
 
       {/* Content */}
       <section className="py-16">
@@ -113,7 +113,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <TheatreQuotes indices={[4, 11, 12]} />
+      <TheatreQuotes indices={[6, 7]} />
     </>
   );
 }

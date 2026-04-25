@@ -17,7 +17,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <TheatreQuotes indices={[2, 7, 9]} />
+      <TheatreQuotes indices={[8, 9]} />
 
       {/* Content */}
       <section className="py-16">
@@ -64,7 +64,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <TheatreQuotes indices={[8, 10, 15]} />
+      <TheatreQuotes indices={[10, 11]} />
     </>
   );
 }
