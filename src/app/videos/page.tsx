@@ -63,11 +63,11 @@ export default function VideosPage() {
           <div className="absolute bottom-6 left-[12%] font-math text-6xl text-white/[0.04] -rotate-6">&infin;</div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
-          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-right">{theatreQuotes[6]}</p>
+          <p className="hidden lg:block max-w-[280px] text-primary-200/80 text-sm italic leading-relaxed text-right">{theatreQuotes[6]}</p>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-center flex-shrink-0">
             Videos
           </h1>
-          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-left">{theatreQuotes[7]}</p>
+          <p className="hidden lg:block max-w-[280px] text-primary-200/80 text-sm italic leading-relaxed text-left">{theatreQuotes[7]}</p>
         </div>
       </section>
 

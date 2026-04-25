@@ -35,11 +35,11 @@ export default function GalleryPage() {
           <div className="absolute bottom-4 right-[8%] font-math text-6xl text-white/[0.04] -rotate-12">&Omega;</div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
-          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-right">{theatreQuotes[0]}</p>
+          <p className="hidden lg:block max-w-[280px] text-primary-200/80 text-sm italic leading-relaxed text-right">{theatreQuotes[0]}</p>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-center flex-shrink-0">
             Photo Gallery
           </h1>
-          <p className="hidden lg:block max-w-[280px] text-primary-200/50 text-xs italic leading-relaxed text-left">{theatreQuotes[1]}</p>
+          <p className="hidden lg:block max-w-[280px] text-primary-200/80 text-sm italic leading-relaxed text-left">{theatreQuotes[1]}</p>
         </div>
       </section>
 
