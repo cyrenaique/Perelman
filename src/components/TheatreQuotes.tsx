@@ -1,3 +1,24 @@
+interface Props {
+  indices: number[];
+}
+
+export function QuotesSection({ indices }: Props) {
+  return (
+    <section className="bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950 py-10 px-4">
+      <div className="max-w-5xl mx-auto flex flex-col gap-4">
+        {indices.map((i) => (
+          <p
+            key={i}
+            className="text-primary-200/70 text-sm md:text-base italic text-center leading-relaxed"
+          >
+            {theatreQuotes[i]}
+          </p>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export const theatreQuotes = [
   "\u201CTheatre is the most transient of arts. A painting lasts, a symphony can be recorded \u2014 but a performance disappears the moment it ends.\u201D \u2014 Simon Callow",
   "\u201CThe theatre is so endlessly fascinating because it\u2019s so accidental. It\u2019s so much like life.\u201D \u2014 Arthur Miller",

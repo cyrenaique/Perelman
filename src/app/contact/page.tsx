@@ -1,5 +1,5 @@
 import { Mail, MapPin, Clock } from "lucide-react";
-import { theatreQuotes } from "@/components/TheatreQuotes";
+import { theatreQuotes, QuotesSection } from "@/components/TheatreQuotes";
 
 export default function ContactPage() {
   return (
@@ -64,6 +64,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <QuotesSection indices={[14, 15]} />
     </>
   );
 }

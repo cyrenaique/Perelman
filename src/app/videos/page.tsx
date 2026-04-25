@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ExternalLink, Play } from "lucide-react";
-import { theatreQuotes } from "@/components/TheatreQuotes";
+import { theatreQuotes, QuotesSection } from "@/components/TheatreQuotes";
 
 interface PerformanceVideo {
   title: string;
@@ -160,6 +160,7 @@ export default function VideosPage() {
         </div>
       </section>
 
+      <QuotesSection indices={[16, 17]} />
     </>
   );
 }
