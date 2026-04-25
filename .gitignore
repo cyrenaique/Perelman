@@ -31,6 +31,10 @@ yarn-error.log*
 # large video files hosted externally
 public/videos/TheSoundofMusic2026.mp4
 
+# large photo folders hosted on Yandex Disk
+public/pictures/2photosMP/
+public/pictures/2photosMP.zip
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

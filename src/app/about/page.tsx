@@ -104,7 +104,7 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-xl max-w-none" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
             {content[lang]}
           </div>
         </div>
