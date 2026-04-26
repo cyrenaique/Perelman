@@ -21,61 +21,44 @@ export default function ContactPage() {
 
       {/* Content */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Contact info */}
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                  <Mail className="w-5 h-5" />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div>
+            <div>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Email</h3>
+                    <p className="text-gray-600">geniustwice@gmail.com</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-900">Email</h3>
-                  <p className="text-gray-600">geniustwice@gmail.com</p>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Location</h3>
+                    <p className="text-gray-600">
+                      Salle Saint-Madeleine, Place Saint-Madeleine
+                      <br />
+                      Strasbourg, 67000, France
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Rehearsals</h3>
+                    <p className="text-gray-600">
+                      Weekly — see our schedule for details
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900">Location</h3>
-                  <p className="text-gray-600">
-                    Salle Saint-Madeleine, Place Saint-Madeleine
-                    <br />
-                    Strasbourg, 67000, France
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                  <Clock className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900">Rehearsals</h3>
-                  <p className="text-gray-600">
-                    Weekly — see our schedule for details
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Production posters collage */}
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { src: "/pictures/affiche_2026.png", alt: "The Sound of Music 2026" },
-                { src: "/pictures/SofM2bt_2024.png", alt: "The Sound of Music 2024" },
-                { src: "/pictures/poppins_2022.jpeg", alt: "Mary Poppins 2022" },
-                { src: "/pictures/canter_2019.png", alt: "The Canterville Ghost 2019" },
-              ].map((img) => (
-                <div key={img.alt} className="rounded-xl overflow-hidden shadow-sm">
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              ))}
             </div>
           </div>
         </div>
