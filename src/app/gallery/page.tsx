@@ -1,10 +1,12 @@
 import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 import { theatreQuotes, QuotesSection } from "@/components/TheatreQuotes";
 
 interface Album {
   title: string;
   cover: string;
   url: string;
+  local?: boolean;
 }
 
 const albums: Album[] = [
@@ -12,6 +14,12 @@ const albums: Album[] = [
     title: "The Sound of Music 2026",
     cover: "/pictures/affiche_2026.png",
     url: "https://disk.yandex.com/d/-tXlEdaLOaJ8sA",
+  },
+  {
+    title: "Mary Poppins 2023",
+    cover: "/pictures/pop-2023.png",
+    url: "/gallery/poppins-2023",
+    local: true,
   },
   {
     title: "Mary Poppins 2022",
@@ -46,29 +54,35 @@ export default function GalleryPage() {
       {/* Album covers */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {albums.map((album) => (
-              <a
-                key={album.url}
-                href={album.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-100 hover:ring-4 ring-primary-400 transition-all shadow-md hover:shadow-xl"
-              >
-                <img
-                  src={album.cover}
-                  alt={album.title}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
-                  <h3 className="text-white font-display text-xl font-bold">
-                    {album.title}
-                  </h3>
-                  <ExternalLink className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
-                </div>
-              </a>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {albums.map((album) => {
+              const inner = (
+                <>
+                  <img
+                    src={album.cover}
+                    alt={album.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+                    <h3 className="text-white font-display text-xl font-bold">
+                      {album.title}
+                    </h3>
+                    {!album.local && <ExternalLink className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />}
+                  </div>
+                </>
+              );
+              const cls = "group relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-100 hover:ring-4 ring-primary-400 transition-all shadow-md hover:shadow-xl";
+              return album.local ? (
+                <Link key={album.url} href={album.url} className={cls}>
+                  {inner}
+                </Link>
+              ) : (
+                <a key={album.url} href={album.url} target="_blank" rel="noopener noreferrer" className={cls}>
+                  {inner}
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
