@@ -58,44 +58,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Our Productions */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-gray-900 mb-4">
-            Our Productions
-          </h2>
-          <p className="text-gray-500 text-center mb-12 max-w-2xl mx-auto">
-            A look back at the shows we have brought to life
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { src: "/pictures/affiche_2026.png", title: "The Sound of Music", year: "2026" },
-              { src: "/pictures/SofM2bt_2024.png", title: "The Sound of Music", year: "2024" },
-              { src: "/pictures/poppins_2022.jpeg", title: "Mary Poppins", year: "2022" },
-              { src: "/pictures/canter_2019.png", title: "The Canterville Ghost", year: "2019" },
-            ].map((show) => (
-              <div
-                key={show.year}
-                className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all bg-white"
-              >
-                <div className="aspect-[3/4]">
-                  <img
-                    src={show.src}
-                    alt={show.title}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-white font-display font-bold text-lg">{show.title}</h3>
-                  <span className="text-white/70 text-sm">{show.year}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
     </>
   );
 }
