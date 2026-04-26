@@ -71,6 +71,13 @@ export default function VideosPage() {
         </div>
       </section>
 
+      {/* Warning banner */}
+      <div className="bg-amber-50 border-l-4 border-amber-400 px-4 py-3 mx-auto max-w-7xl mt-6 sm:mx-4 lg:mx-auto rounded-r-lg">
+        <p className="text-amber-800 text-sm">
+          <strong>Note:</strong> If a YouTube video is not available, please try the Mega or Yandex links provided below each video.
+        </p>
+      </div>
+
       {/* All Videos — sorted by year, newest first */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
