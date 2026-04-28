@@ -28,8 +28,8 @@ yarn-error.log*
 # vercel
 .vercel
 
-# large video files hosted externally
-public/videos/TheSoundofMusic2026.mp4
+# all mp4 files
+*.mp4
 
 # large photo folders hosted on Yandex Disk
 public/pictures/2photosMP/
