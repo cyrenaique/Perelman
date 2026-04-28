@@ -35,6 +35,13 @@ const allVideos: PerformanceVideo[] = ([
   },
   {
     title: "Mary Poppins",
+    year: 2023,
+    thumbnail: "/pictures/pop-2023.png",
+    type: "youtube" as const,
+    embedId: "U8lBArY_6jI",
+  },
+  {
+    title: "Mary Poppins",
     year: 2022,
     thumbnail: "/pictures/poppins_2022.jpeg",
     type: "youtube" as const,
