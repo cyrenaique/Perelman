@@ -27,8 +27,8 @@ const rehearsalVideos: RehearsalVideo[] = [
   { file: "MaryPoppins2023 -1.mp4", url: "https://mega.nz/file/g00GWBhI#iPKv8sQnLOLSDeEpqUtiSsBiehWtPQPOoWJRo9fXaJs" },
   { file: "MaryPoppins2023 -2.mp4", url: "https://mega.nz/file/40MCwa5L#Bp_bEI0VSvWfeqBincUgegN7j5dce0R7UBGGr1RnEXE" },
   { file: "MaryPoppins2023.mp4", url: "https://mega.nz/file/Y0smnR7T#pEIUol1xH4n2h5IyyZA6B1FM_7Fc4iNb6l54bw9dxFc" },
-  { file: "SoundOfMusic2025-1.mp4", url: "https://mega.nz/file/519mibAB#eZjMytya-BiH2bJkJ-xqjvLeX4lECUInfv7goax7j-Y" },
-  { file: "SoundOsMusic2025.mp4", url: "https://mega.nz/file/4lMwDYya#ypmGh_khC-SVIjDKgYmgWwpZLZ3jTEo2PwTeLYPI5dY" },
+  { file: "SoundOfMusic2024-1.mp4", url: "https://mega.nz/file/519mibAB#eZjMytya-BiH2bJkJ-xqjvLeX4lECUInfv7goax7j-Y" },
+  { file: "SoundOsMusic2024.mp4", url: "https://mega.nz/file/4lMwDYya#ypmGh_khC-SVIjDKgYmgWwpZLZ3jTEo2PwTeLYPI5dY" },
 ];
 
 interface Clip {
