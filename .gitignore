@@ -28,10 +28,8 @@ yarn-error.log*
 # vercel
 .vercel
 
-# all mp4 files
+# all mp4 files (rehearsal clips are hosted on Mega.nz, not committed)
 *.mp4
-# ...except rehearsal videos (small clips, tracked in the repo)
-!public/videos/Rehearsal/*.mp4
 
 # large photo folders hosted on Yandex Disk
 public/pictures/2photosMP/
