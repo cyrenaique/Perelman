@@ -1,11 +1,8 @@
-"use client";
+import fs from "fs";
+import path from "path";
 
-import { useEffect, useState } from "react";
-
-interface MediaFile {
-  name: string;
-  src: string;
-}
+const VIDEO_EXTENSIONS = [".mp4", ".webm", ".ogg", ".mov"];
+const REHEARSAL_DIR = path.join(process.cwd(), "public", "videos", "Rehearsal");
 
 interface Clip {
   src: string;
@@ -41,17 +38,26 @@ function parseFile(name: string): { spectacle: string; year: number; clipNumber:
   };
 }
 
-function buildGroups(files: MediaFile[]): RehearsalGroup[] {
-  const groups = new Map<string, RehearsalGroup>();
+// Read the rehearsal videos from the public folder at build time.
+function getRehearsalGroups(): RehearsalGroup[] {
+  if (!fs.existsSync(REHEARSAL_DIR)) return [];
 
+  const files = fs
+    .readdirSync(REHEARSAL_DIR)
+    .filter((file) => VIDEO_EXTENSIONS.includes(path.extname(file).toLowerCase()));
+
+  const groups = new Map<string, RehearsalGroup>();
   for (const file of files) {
-    const parsed = parseFile(file.name);
+    const parsed = parseFile(file);
     if (!parsed) continue;
     const key = `${parsed.spectacle} ${parsed.year}`;
     if (!groups.has(key)) {
       groups.set(key, { key, spectacle: parsed.spectacle, year: parsed.year, clips: [] });
     }
-    groups.get(key)!.clips.push({ src: file.src, clipNumber: parsed.clipNumber });
+    groups.get(key)!.clips.push({
+      src: `/videos/Rehearsal/${file}`,
+      clipNumber: parsed.clipNumber,
+    });
   }
 
   const result = Array.from(groups.values());
@@ -65,16 +71,7 @@ function buildGroups(files: MediaFile[]): RehearsalGroup[] {
 }
 
 export default function RehearsalsPage() {
-  const [groups, setGroups] = useState<RehearsalGroup[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("/api/media?folder=videos&subfolder=Rehearsal")
-      .then((res) => res.json())
-      .then((data: { files?: MediaFile[] }) => setGroups(buildGroups(data.files ?? [])))
-      .catch(() => setGroups([]))
-      .finally(() => setLoading(false));
-  }, []);
+  const groups = getRehearsalGroups();
 
   return (
     <>
@@ -94,9 +91,7 @@ export default function RehearsalsPage() {
       {/* Rehearsal videos grouped by spectacle & year */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {loading ? (
-            <p className="text-center text-gray-500">Loading rehearsals…</p>
-          ) : groups.length === 0 ? (
+          {groups.length === 0 ? (
             <p className="text-center text-gray-500">No rehearsal videos available yet.</p>
           ) : (
             <div className="flex flex-col gap-14">
