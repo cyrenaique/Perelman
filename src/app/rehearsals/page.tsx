@@ -33,6 +33,7 @@ const rehearsalVideos: RehearsalVideo[] = [
 
 interface Clip {
   url: string;
+  thumb: string;
   clipNumber: number | null;
 }
 
@@ -74,7 +75,8 @@ function getRehearsalGroups(): RehearsalGroup[] {
     if (!groups.has(key)) {
       groups.set(key, { key, spectacle: parsed.spectacle, year: parsed.year, clips: [] });
     }
-    groups.get(key)!.clips.push({ url: video.url, clipNumber: parsed.clipNumber });
+    const thumb = encodeURI(`/videos/rehearsal-thumbs/${video.file.replace(/\.mp4$/i, ".jpg")}`);
+    groups.get(key)!.clips.push({ url: video.url, thumb, clipNumber: parsed.clipNumber });
   }
 
   const result = Array.from(groups.values());
@@ -139,12 +141,18 @@ export default function RehearsalsPage() {
                         rel="noopener noreferrer"
                         className="group relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-primary-900 to-primary-950 hover:ring-4 ring-primary-400 transition-all shadow-sm hover:shadow-lg"
                       >
-                        <div className="absolute inset-0 flex items-center justify-center">
+                        <img
+                          src={clip.thumb}
+                          alt={`${group.spectacle} ${group.year} rehearsal`}
+                          loading="lazy"
+                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
                           <div className="w-12 h-12 bg-white/25 rounded-full flex items-center justify-center group-hover:bg-white/40 transition-colors">
                             <Play className="w-6 h-6 text-white ml-0.5" />
                           </div>
                         </div>
-                        <ExternalLink className="absolute top-2 right-2 w-4 h-4 text-white/60 group-hover:text-white transition-colors" />
+                        <ExternalLink className="absolute top-2 right-2 w-4 h-4 text-white/80 group-hover:text-white transition-colors" />
                       </a>
                     ))}
                   </div>
