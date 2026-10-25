@@ -16,6 +16,12 @@ const albums: Album[] = [
     url: "https://disk.yandex.com/d/-tXlEdaLOaJ8sA",
   },
   {
+    title: "The Sound of Music 2024",
+    cover: "/pictures/som-2024.png",
+    url: "/gallery/som-2024",
+    local: true,
+  },
+  {
     title: "Mary Poppins 2023",
     cover: "/pictures/pop-2023.png",
     url: "/gallery/poppins-2023",
