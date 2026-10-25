@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Amateur Theatre in English Perelman",
   description:
-    "Welcome to Amateur Theatre in English Perelman — a passionate community of theatre lovers performing in English.",
+    "Multinational, multicultural association of children aged 5 to 18 and their parents.",
 };
 
 export default function RootLayout({
